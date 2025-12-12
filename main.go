@@ -3,15 +3,13 @@ package main
 import (
 	"fmt"
 
-	"github.com/GRACENOBLE/practice/sum"
+	"github.com/GRACENOBLE/practice/search"
 )
 
 func main() {
 	integers := []int{1, 2, 3, 4, 5}
 
-	sum := sum.SumIntegers(integers)
+	response := search.SearchNumberInList(integers, 5)
 
-	fmt.Printf("The sum of the integers is %v", sum)
-
+	fmt.Printf("%v", response)
 }
-
