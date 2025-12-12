@@ -7,9 +7,13 @@ import (
 )
 
 func main() {
-	integers := []int{1, 2, 3, 4, 5}
 
-	response := search.SearchNumberInList(integers, 5)
+	integers := search.List{Items: []int{1, 3, 5, 7}}
+
+	response := integers.BinarySearch(6)
+
+	// response := search.GetMiddle(integers.Items)
 
 	fmt.Printf("%v", response)
 }
+
