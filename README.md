@@ -1,5 +1,10 @@
-# Hi, 😅 I am surprised you are reading this, but this is my practice area for DSA using Go, 
+# Hi, 😅 I am surprised you are here
 
-## I intend to tackle some leet-code here as well, 
+This is my practice area for DSA using Go, 
 
-## Going one step at a time, a little more each day 
+I intend to 
+- tackle some leet-code
+- learn more Go
+- make my brain bigger 
+
+## One step at a time, a little more each day 
