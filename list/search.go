@@ -1,13 +1,40 @@
-// The assumption is that the list is sorted.
+package list
 
-package search
+// -----------------------Sequential search---------------------
+
+func (list List) SequentialSearch( searchTerm int) Response {
+	for _, number := range list {
+		if number == searchTerm {
+			return Response{
+				Presence: true,
+				Number:   searchTerm,
+			}
+		}
+	}
+
+	// There is an inbuilt function in go to check for the presence of an item
+	// if slices.Contains(list, searchTerm) {
+	// 	return Response{
+	// 		Presence: true,
+	// 		Number:   searchTerm,
+	// 	}
+	// }
+
+	return Response{
+		Presence: false,
+		Number:   searchTerm,
+	}
+}
+
+
+// -----------------------Binary search---------------------
 
 func (list List) BinarySearch(searchTerm int) Response {
-	if len(list.Items) == 0 {
+	if len(list) == 0 {
 		return Response{Presence: false, Number: searchTerm}
 	}
 
-	var currentSample []int = list.Items
+	var currentSample []int = list
 	for len(currentSample) > 0 {
 
 		middle := GetMiddle(currentSample)
@@ -35,3 +62,4 @@ func GetMiddle(sublist []int) MiddleValue {
 		Value: sublist[middleFloorIndex],
 	}
 }
+
