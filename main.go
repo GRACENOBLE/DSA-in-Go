@@ -3,11 +3,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/GRACENOBLE/practice/sum"
+	"github.com/GRACENOBLE/practice/list"
 )
 
 func main() {
+	myList := list.List{1, 2, 3, 4, 5, 6, 7}
 
-	myList := []int{-5, -4, -3, -2, -1}
-	fmt.Println(sum.LargestContiguousSum(myList))
+	fmt.Println(myList.LargestContiguousSum())
 }

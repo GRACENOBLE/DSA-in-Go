@@ -1,9 +1,9 @@
 // Given a list of positive and negative integers, find a contiguous subarray whose sum (sum of elements) is maximum.
 
-package sum
+package list
 
 // Kabanes algorithm, maintains the highest value of maxSoFar
-func LargestContiguousSum(list []int) int {
+func (list List) LargestContiguousSum() int {
 
 	maxSoFar := list[0]
 	maxEndingHere := list[0]
