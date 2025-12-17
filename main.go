@@ -1,10 +1,12 @@
 package main
 
 import (
-	"github.com/GRACENOBLE/practice/recursiveProblems"
+	"fmt"
+
+	recursiveproblems "github.com/GRACENOBLE/practice/recursiveProblems"
 )
 
 func main() {
 
-	recursiveproblems.TowersOfHanoi(3)
+	fmt.Println(recursiveproblems.GCD(30, 40))
 }
