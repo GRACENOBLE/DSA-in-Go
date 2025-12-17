@@ -1,13 +1,10 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/GRACENOBLE/practice/list"
+	"github.com/GRACENOBLE/practice/stack"
 )
 
 func main() {
-	myList := list.List{1, 2, 3, 4, 5, 6, 7}
 
-	fmt.Println(myList.LargestContiguousSum())
+	stack.TowersOfHanoi(3)
 }
