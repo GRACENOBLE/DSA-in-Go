@@ -8,5 +8,5 @@ import (
 
 func main() {
 
-	fmt.Println(recursiveproblems.GCD(30, 40))
+	fmt.Println(recursiveproblems.Fibbonacci(30))
 }
