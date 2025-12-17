@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/GRACENOBLE/practice/stack"
+	"github.com/GRACENOBLE/practice/recursiveProblems"
 )
 
 func main() {
 
-	stack.TowersOfHanoi(3)
+	recursiveproblems.TowersOfHanoi(3)
 }
