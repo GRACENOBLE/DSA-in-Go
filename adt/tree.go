@@ -4,6 +4,8 @@ import (
 	"fmt"
 
 	"github.com/golang-collections/collections/splay"
+	"github.com/golang-collections/collections/trie"
+	"github.com/golang-collections/collections/tst"
 )
 
 func less(a, b interface{}) bool {
@@ -42,6 +44,55 @@ func Splay() {
 
 }
 
-func Trae() {
+// Stores index and value pairs
+func Trie() {
+	t := trie.New()
 
+	t.Insert(1, 5)
+	t.Insert(2, 4)
+	t.Insert(3, 3)
+	t.Insert(4, 2)
+	t.Insert(5, 1)
+
+	// Check if value exists
+	found := t.Has(5)
+	fmt.Println("Found 5:", found)
+
+	// Get an item at a specific index
+	item := t.Get(4)
+	fmt.Println("Found item at 4:", item)
+
+	// Iterate over the items in the structure
+	t.Do(func(k, v interface{}) bool {
+		fmt.Printf("Key: %v, Value: %v\n", k, v)
+		return true
+	})
+}
+
+// Ternary search tree (stores key(string) and value pairs)
+func Tst() {
+	t := tst.New()
+
+	t.Insert("one", 5)
+	t.Insert("two", 4)
+	t.Insert("three", 3)
+	t.Insert("four", 2)
+	t.Insert("five", 1)
+
+	// Check for presence
+	present := t.Has("one")
+	fmt.Println("Has one: ", present)
+
+	// Get a value for a specific key
+	item := t.Get("one")
+	fmt.Println("The item at key one is:", item)
+
+	// Remove an item from the tree
+	t.Remove("five")
+
+	// Iterate through the values of the tree
+	t.Do(func(k string, v interface{}) bool {
+		fmt.Printf("Key: %v, Value: %v\n", k, v)
+		return true
+	})
 }
