@@ -1,12 +1,10 @@
 package main
 
 import (
-	"fmt"
-
-	recursiveproblems "github.com/GRACENOBLE/practice/recursiveProblems"
+	"github.com/GRACENOBLE/practice/adt"
 )
 
 func main() {
 
-	fmt.Println(recursiveproblems.Fibbonacci(30))
+	adt.Stack()
 }
