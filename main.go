@@ -6,5 +6,5 @@ import (
 
 func main() {
 
-	adt.Stack()
+	adt.Splay()
 }
