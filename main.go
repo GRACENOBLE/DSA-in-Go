@@ -3,16 +3,11 @@ package main
 import (
 	"fmt"
 
-	"github.com/GRACENOBLE/practice/adt"
+	"github.com/GRACENOBLE/practice/search"
 )
 
 func main() {
-	myCounter := make(adt.Counter)
-	myCounter.Add("one")
-	myCounter.Add("two")
-	myCounter.Add("one")
-
-	fmt.Println(myCounter.Find("two"))
-	fmt.Println(myCounter.Get("one"))
-
+	myArray := []any{"hi", 1, true, "hello"}
+	found := search.UnorderedSequentialSearch(myArray, "hello")
+	fmt.Println(found)
 }
