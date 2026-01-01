@@ -4,22 +4,17 @@
 
 package search
 
-type response struct {
-	found bool
-	value any
-}
-
-func UnorderedSequentialSearch(array []any, searchTerm any) response {
-	for _, value := range array {
+func (l List) UnorderedSequentialSearch(searchTerm int) Response {
+	for _, value := range l {
 		if value == searchTerm {
-			return response{
+			return Response{
 				found: true,
 				value: value,
 			}
 		}
 	}
 
-	return response{
+	return Response{
 		found: false,
 		value: nil,
 	}
