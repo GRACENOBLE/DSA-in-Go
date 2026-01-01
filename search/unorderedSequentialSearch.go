@@ -1,3 +1,7 @@
+// UNORDERED SEQUENTIAL SEARCH
+// Time complexity O(n) as the time increases with size of the array for worst case
+// Space complexity O(1) as no more space is needed other than defining the array
+
 package search
 
 type response struct {
